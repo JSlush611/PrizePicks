@@ -35,7 +35,7 @@ def Create_NBA_Score(bet_dicts):
             team_avg = Calculate_Avg_Multiple_Years(nba_against_team_stats, stat_type)
 
             try:
-                weighted_avg = ((.4*szn_avg) + (.45*recent_avg) + (.15*team_avg))
+                weighted_avg = ((.51*szn_avg) + (.41*recent_avg) + (.08*team_avg))
                 stat_dif = float(stat_line) - float(weighted_avg)
 
                 if len(top_3) < 3:
@@ -61,7 +61,6 @@ def Create_NBA_Score(bet_dicts):
             i += 1
             
             print('Continuing: ' + str(i) + '/' + str(len(bet_dicts)) + ' done.')
-
 
     best_under = {
         'Best_Under': bet_dicts[top_3[0][0]]['Player_Name'], 'Dif': top_3[0][1],

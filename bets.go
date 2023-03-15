@@ -43,7 +43,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	f, err := os.Create("bets.txt")
+	f, err := os.Create("PrizePickies/bets.txt")
 
 	if err != nil {
 		log.Fatal(err)
